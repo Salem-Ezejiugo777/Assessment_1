@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home · Ada Nwosu — MIVA Student Portfolio</title>
+  <meta name="description" content="Student portfolio and academic management site for Ada Nwosu, MIVA Open University." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html">MIVA<small>PORTFOLIO / CIT&nbsp;204</small></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Academic Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO / PROFILE ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="welcome">Welcome to my student portfolio</p>
+          <h1>Hi, I'm <span>Ada Nwosu.</span><br />I build things for the web.</h1>
+          <p class="hero-bio">
+            I'm a second-year Information Technology student at MIVA Open University,
+            currently working through the <em>Introduction to Web Technologies</em> course.
+            This site doubles as my portfolio and my academic command center — projects,
+            coursework, and a live planner I actually use to track deadlines.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-brass" href="projects.html">View my projects</a>
+            <a class="btn btn-outline" href="about.html">More about me</a>
+          </div>
+        </div>
+
+        <div class="id-card" aria-hidden="false">
+          <div class="id-card-top">
+            <span>MIVA Open University</span>
+            <span class="id-stamp">Enrolled</span>
+          </div>
+          <div class="id-photo">Photo placeholder<br />(headshot, 4:3)</div>
+          <h2 class="id-name">Ada Nwosu</h2>
+          <p class="id-meta"><strong>Program:</strong> B.Sc. Information Technology<br />
+             <strong>Level:</strong> 200 · <strong>ID:</strong> MIVA/IT/2024/0198</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BIOGRAPHY ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Brief biography</p>
+          <h2>A little about my journey</h2>
+        </div>
+        <div class="grid-2">
+          <p>
+            I grew up taking apart the family desktop just to see how it went back together —
+            which, in hindsight, was the first sign I'd end up here. I started at MIVA Open
+            University to formalize what I'd been teaching myself online, and I've since
+            developed a genuine love for the logic of front-end development: the way a good
+            layout, clear code, and a bit of design sense come together to make something
+            people actually enjoy using.
+          </p>
+          <p>
+            Outside coursework, I'm the kind of student who keeps a running list of small
+            projects — this portfolio being one of them. I'm especially interested in how
+            web technologies can support academic life itself, which is why the Academic
+            Planner on this site isn't a token feature; it's the tool I use to track my own
+            assignments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUICK LINKS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Find your way around</p>
+          <h2>What's on this site</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <p class="eyebrow">01 — Background</p>
+            <h3>About Me</h3>
+            <p>Education, career goals, technical skills, and the hobbies that keep me sane during exam week.</p>
+            <a href="about.html">Read more →</a>
+          </article>
+          <article class="card">
+            <p class="eyebrow">02 — Coursework</p>
+            <h3>Projects</h3>
+            <p>Three projects built for and around my Web Technologies coursework, with write-ups and links.</p>
+            <a href="projects.html">See the work →</a>
+          </article>
+          <article class="card">
+            <p class="eyebrow">03 — Tool</p>
+            <h3>Academic Planner</h3>
+            <p>An interactive to-do list for assignments and deadlines — add, complete, filter, and delete tasks.</p>
+            <a href="planner.html">Open planner →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Ada Nwosu · MIVA Open University · Introduction to Web Technologies</span>
+      <span>Built with semantic HTML, CSS Grid/Flexbox &amp; vanilla JS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

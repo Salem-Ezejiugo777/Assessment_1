@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me · Ada Nwosu — MIVA Student Portfolio</title>
+  <meta name="description" content="Educational background, career aspirations, technical skills and hobbies." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="brand" href="index.html">MIVA<small>PORTFOLIO / CIT&nbsp;204</small></a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Academic Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:40px;">
+      <div class="container">
+        <p class="eyebrow">Student file</p>
+        <h1>About Me</h1>
+        <p class="hero-bio">The background, goals, and skills behind this portfolio.</p>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Educational background</p>
+          <h2>Transcript summary</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="transcript-table">
+            <caption>Academic record — MIVA Open University</caption>
+            <thead>
+              <tr>
+                <th scope="col">Institution</th>
+                <th scope="col">Program</th>
+                <th scope="col">Period</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MIVA Open University</td>
+                <td>B.Sc. Information Technology</td>
+                <td>2024 – Present</td>
+                <td>In progress</td>
+              </tr>
+              <tr>
+                <td>Federal Government College, Enugu</td>
+                <td>Senior Secondary (Science)</td>
+                <td>2018 – 2024</td>
+                <td>Completed</td>
+              </tr>
+              <tr>
+                <td>MIVA Open University — Self-paced</td>
+                <td>Introduction to Web Technologies</td>
+                <td>Current term</td>
+                <td>In progress</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CAREER ASPIRATIONS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Career aspirations</p>
+          <h2>Where I'm headed</h2>
+        </div>
+        <ul class="timeline">
+          <li>
+            <p class="tl-tag">Short term</p>
+            <h4>Front-end developer internship</h4>
+            <p>Apply the HTML, CSS, and JavaScript fundamentals from this course in a real product team, and get comfortable with a modern framework like React.</p>
+          </li>
+          <li>
+            <p class="tl-tag">Mid term</p>
+            <h4>Full-stack web developer</h4>
+            <p>Round out my skill set with back-end and database work so I can build and ship complete academic and productivity tools — not unlike this planner.</p>
+          </li>
+          <li>
+            <p class="tl-tag">Long term</p>
+            <h4>Product-minded engineer / founder</h4>
+            <p>Build software that helps students manage academic life more easily, ideally for learners studying remotely the way I do.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TECHNICAL SKILLS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Technical skills</p>
+          <h2>What I work with</h2>
+        </div>
+        <ul class="skill-bars">
+          <li>
+            <span>HTML5</span>
+            <span class="skill-track"><span class="skill-fill" data-level="85"></span></span>
+            <span>85%</span>
+          </li>
+          <li>
+            <span>CSS3 / Flexbox / Grid</span>
+            <span class="skill-track"><span class="skill-fill" data-level="78"></span></span>
+            <span>78%</span>
+          </li>
+          <li>
+            <span>JavaScript (DOM)</span>
+            <span class="skill-track"><span class="skill-fill" data-level="65"></span></span>
+            <span>65%</span>
+          </li>
+          <li>
+            <span>Git &amp; GitHub</span>
+            <span class="skill-track"><span class="skill-fill" data-level="60"></span></span>
+            <span>60%</span>
+          </li>
+          <li>
+            <span>Responsive Design</span>
+            <span class="skill-track"><span class="skill-fill" data-level="72"></span></span>
+            <span>72%</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ HOBBIES ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Off the clock</p>
+          <h2>Hobbies &amp; interests</h2>
+        </div>
+        <div class="grid-2">
+          <ul class="hobby-list">
+            <li>Sketching UI concepts in a paper notebook before touching code</li>
+            <li>Table tennis — campus league, currently mid-table</li>
+            <li>Listening to Afrobeats and lo-fi playlists while studying</li>
+          </ul>
+          <ul class="hobby-list">
+            <li>Reading tech blogs and changelogs for tools I don't even use yet</li>
+            <li>Photography — mostly street shots around campus</li>
+            <li>Volunteering with a weekend coding club for secondary school students</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Ada Nwosu · MIVA Open University · Introduction to Web Technologies</span>
+      <span>Built with semantic HTML, CSS Grid/Flexbox &amp; vanilla JS</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
