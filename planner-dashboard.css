@@ -185,8 +185,10 @@ body {
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr;
   gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ============ CARDS ============ */
@@ -749,10 +751,9 @@ textarea {
 }
 
 /* ============ RESPONSIVE ============ */
-@media (max-width: 1400px) {
+@media (min-width: 900px) {
   .content-wrapper {
-    grid-template-columns: 1fr 340px;
-    gap: 24px;
+    grid-template-columns: 1fr 380px;
   }
 }
 
