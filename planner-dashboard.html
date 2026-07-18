@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner Dashboard · Kosisochukwu Ezejiugo</title>
+  <meta name="description" content="Modern Student Academic Planner Dashboard with calendar, events, and task management." />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="planner-dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- ============ SIDEBAR NAVIGATION ============ -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fas fa-book-open"></i>
+          <span>MIVA Planner</span>
+        </div>
+        <button class="sidebar-toggle-close" aria-label="Close sidebar">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="nav-link"><i class="fas fa-chart-line"></i><span>Dashboard</span></a></li>
+          <li><a href="#" class="nav-link active"><i class="fas fa-calendar-alt"></i><span>Planner</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-book"></i><span>Courses</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-tasks"></i><span>Tasks</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-project-diagram"></i><span>Projects</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-calendar"></i><span>Events</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-star"></i><span>Grades</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-sticky-note"></i><span>Notes</span></a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="logout-btn"><i class="fas fa-sign-out-alt"></i><span>Logout</span></button>
+      </div>
+    </aside>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <div class="main-wrapper">
+      <!-- Header -->
+      <header class="top-header">
+        <button class="sidebar-toggle-open" aria-label="Open sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <div class="header-spacer"></div>
+
+        <div class="header-actions">
+          <button class="notification-btn" aria-label="Notifications">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </button>
+
+          <div class="user-profile">
+            <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic">
+            <div class="profile-dropdown">
+              <button class="profile-btn">
+                <span class="profile-name">Kosisochukwu E.</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#"><i class="fas fa-user"></i> My Profile</a>
+                <a href="#"><i class="fas fa-sliders-h"></i> Preferences</a>
+                <hr>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <div class="content-wrapper">
+          <!-- Left Section: Calendar & Events -->
+          <section class="calendar-section">
+            <!-- Calendar Card -->
+            <div class="card calendar-card">
+              <div class="card-header">
+                <h2 class="card-title">Calendar</h2>
+                <div class="calendar-controls">
+                  <button class="btn-icon" id="prev-month" aria-label="Previous month">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="btn-text btn-today" id="today-btn">Today</button>
+                  <button class="btn-icon" id="next-month" aria-label="Next month">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="calendar-header">
+                <h3 class="month-year" id="month-year"></h3>
+              </div>
+
+              <!-- View Tabs -->
+              <div class="view-tabs">
+                <button class="tab-btn active" data-view="month">Month</button>
+                <button class="tab-btn" data-view="week">Week</button>
+                <button class="tab-btn" data-view="day">Day</button>
+              </div>
+
+              <!-- Weekday Headers -->
+              <div class="weekdays">
+                <div class="weekday">Sun</div>
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+              </div>
+
+              <!-- Calendar Grid -->
+              <div class="calendar-grid" id="calendar-grid"></div>
+            </div>
+
+            <!-- Add Event Button -->
+            <button class="btn btn-primary btn-add-event" id="add-event-btn">
+              <i class="fas fa-plus"></i> Add Event
+            </button>
+          </section>
+
+          <!-- Right Section: Sidebar Cards -->
+          <aside class="right-sidebar">
+            <!-- Today's Agenda Card -->
+            <div class="card agenda-card">
+              <div class="card-header">
+                <h3 class="card-title">Today's Agenda</h3>
+              </div>
+              <div class="agenda-list" id="agenda-list">
+                <!-- Populated by JavaScript -->
+              </div>
+            </div>
+
+            <!-- Tasks Card -->
+            <div class="card tasks-card">
+              <div class="card-header">
+                <h3 class="card-title">My Tasks</h3>
+              </div>
+              
+              <div class="task-input-group">
+                <input type="text" id="task-input" class="task-input" placeholder="Add a new task..." />
+                <button class="btn-icon btn-add-task" id="add-task-btn">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+
+              <div class="tasks-list" id="tasks-list">
+                <!-- Populated by JavaScript -->
+              </div>
+            </div>
+
+            <!-- Quick Stats Card -->
+            <div class="card stats-card">
+              <div class="stat-item">
+                <div class="stat-icon" style="background-color: #d4a574;">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="stat-content">
+                  <p class="stat-label">Events This Month</p>
+                  <p class="stat-value" id="stat-events">0</p>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon" style="background-color: #e8b4a8;">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <div class="stat-content">
+                  <p class="stat-label">Pending Tasks</p>
+                  <p class="stat-value" id="stat-pending">0</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- ============ ADD EVENT MODAL ============ -->
+  <div class="modal" id="event-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add Event</h2>
+        <button class="modal-close" id="modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <form id="event-form" class="event-form">
+        <div class="form-group">
+          <label for="event-title">Event Title *</label>
+          <input type="text" id="event-title" name="event-title" required placeholder="e.g., DSA Lecture" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="event-date">Date *</label>
+            <input type="date" id="event-date" name="event-date" required />
+          </div>
+          <div class="form-group">
+            <label for="event-time">Time</label>
+            <input type="time" id="event-time" name="event-time" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="event-color">Category</label>
+          <select id="event-color" name="event-color">
+            <option value="blue">Lecture</option>
+            <option value="green">Tutorial</option>
+            <option value="orange">Class</option>
+            <option value="red">Assignment Due</option>
+            <option value="purple">Study Session</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="event-description">Description</label>
+          <textarea id="event-description" name="event-description" placeholder="Add any details..."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" id="modal-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="planner-dashboard.js"></script>
+</body>
+</html>
