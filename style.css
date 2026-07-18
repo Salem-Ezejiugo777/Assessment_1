@@ -409,9 +409,6 @@ p { margin: 0 0 1em; color: var(--ink-soft); line-height: 1.7; }
   box-shadow: var(--shadow-card-sm);
 }
 
-.id-name { display: none; }
-.id-meta { display: none; }
-
 /* ---------- Section shell ---------- */
 .section {
   padding: 72px 0;
